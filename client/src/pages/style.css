@@ -1,0 +1,19 @@
+.btn {
+  background-color: rgb(4, 110, 110);
+}
+
+.saved-book {
+  /* padding: 10pt; */
+  font-size: 18pt;
+}
+
+img {
+  padding: 20pt;
+}
+
+.search-container {
+}
+
+.onHover {
+  background-color: darkolivegreen;
+}
