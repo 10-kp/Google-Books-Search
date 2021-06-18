@@ -1,0 +1,9 @@
+.navbar-brand {
+  font-size: 20pt;
+  margin-right: 16rem;
+}
+
+.navbar-right {
+  font-size: 20pt;
+  float: right;
+}
