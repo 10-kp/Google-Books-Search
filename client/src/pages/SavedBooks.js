@@ -9,7 +9,6 @@ import './style.css';
 function SavedBooks() {
   const [savedBooks, setSavedBooks] = useState([]);
 
-  // const { id } = useParams()
   useEffect(() => {
     loadBooks();
   }, []);
@@ -38,7 +37,6 @@ function SavedBooks() {
       <br></br>
       <br></br>
       <Container fluid='md' id='resultsdiv'>
-        {/* <h2>Saved Books</h2> */}
         <Row>
           {savedBooks.length ? (
             <List>
@@ -52,7 +50,6 @@ function SavedBooks() {
                           : `${savedBook.image}`
                       }
                       alt={savedBook.title}
-                      // className="md"
                     />
                   </a>
 
