@@ -1,30 +1,35 @@
 import React from 'react';
 
-export default function Form(props) {
+import './style.css';
+export function Input(props) {
   return (
-    <div className='container'>
-      <form>
-        <div className='form-group'>
-          <label htmlFor='search'>
-            <h2>Search for and save Books of Interest</h2>
-          </label>
-          <input
-            onChange={props.handleInputChange}
-            value={props.search}
-            name='search'
-            type='text'
-            className='form-control'
-            placeholder='Search a Book'
-            id='search'
-          />
-          <button
-            onClick={props.handleFormSubmit}
-            className='btn btn-light mt-4 mb-5'
-          >
-            Search
-          </button>
-        </div>
-      </form>
+    <form onSubmit={props.onSubmit}>
+      <div className='form-group mt-10'>
+        <input className='form-control' onChange={props.onChange} {...props} />
+      </div>
+    </form>
+  );
+}
+
+export function TextArea(props) {
+  return (
+    <div className='form-group mt-10'>
+      <textarea className='form-control' rows='20' {...props} />
+    </div>
+  );
+}
+
+export function FormBtn(props) {
+  return (
+    <div>
+      <button
+        type='submit'
+        {...props}
+        style={{ float: 'right', marginBottom: 10 }}
+        className='btn btn-success'
+      >
+        {props.children}
+      </button>
     </div>
   );
 }
