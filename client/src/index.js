@@ -1,8 +1,11 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import "./index.css";
-import App from "./App";
-import registerServiceWorker from "./registerServiceWorker";
+import React from 'react';
 
-ReactDOM.render(<App />, document.getElementById("root"));
-registerServiceWorker();
+export default function Nav() {
+  return (
+    <nav className='navbar navbar-expand-lg navbar-dark bg-primary'>
+      <a className='navbar-brand' href='/'>
+        React Reading List
+      </a>
+    </nav>
+  );
+}
