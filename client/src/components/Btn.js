@@ -1,8 +1,9 @@
 import React from 'react';
 import '../index.css';
 import Button from 'react-bootstrap/Button';
-// The ...props means, spread all of the passed props onto this element
-// That way we don't have to define them all individually
+// ...props to spread all of the passed props onto this element,
+// to avoid defining them individually
+
 export function DeleteBtn(props) {
   return (
     <Button
