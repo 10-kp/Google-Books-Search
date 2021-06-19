@@ -1,5 +1,42 @@
 body {
   margin: 0;
-  padding: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+* {
+  font-family: 'Raleway', sans-serif;
+}
+
+.jumbotron {
+  padding: 5em inherit;
+  background-color: #35e9f0;
+  height: 100vh;
+  justify-content: center;
+  width: 100%;
+}
+
+.btn {
+  background-color: #287069;
+}
+
+.book-description {
+  background-color: white;
+  float: right;
+}
+
+.book-title {
+  background-color: white;
+}
+
+.navbar {
+  margin-bottom: 0px;
 }
