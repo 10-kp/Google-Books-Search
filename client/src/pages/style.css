@@ -1,16 +1,15 @@
 .btn {
-  background-color: rgb(4, 110, 110);
+  background-color: rgb(117, 107, 14);
 }
 
 .saved-book {
-  /* padding: 10pt; */
   font-size: 18pt;
 }
 
 img {
-  padding: 20pt;
+  padding: 30pt;
 }
 
 .onHover {
-  background-color: darkolivegreen;
+  background-color: rgb(141, 211, 21);
 }

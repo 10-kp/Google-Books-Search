@@ -1,11 +1,17 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+import * as registerServiceWorker from './registerServiceWorker';
+require('dotenv').config();
+require('bootstrap');
+require('react-bootstrap');
 
-export default function Nav() {
-  return (
-    <nav className='navbar navbar-expand-lg navbar-dark bg-primary'>
-      <a className='navbar-brand' href='/'>
-        React Reading List
-      </a>
-    </nav>
-  );
-}
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
+
+registerServiceWorker.unregister();

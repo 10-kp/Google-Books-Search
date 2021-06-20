@@ -7,17 +7,18 @@ const app = express();
 require('dotenv').config();
 
 //react access the api key in the .env
-process.env.REACT_APP_API_KEY;
-process.env.dbuser;
-process.env.dbpassword;
+process.env.KEY;
+// process.env.dbuser;
+// process.env.dbpassword;
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Serve up static assets (usually on heroku)
-// if (process.env.NODE_ENV === 'production'){}
-app.use(express.static('client/build'));
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('client/build'));
+}
 
 // Define API routes here
 app.use(routes);
@@ -26,10 +27,15 @@ app.use(routes);
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/googlebooks', {
   useNewUrlParser: true,
 });
+
 db.on('Error on Mongo connection', (error) => console.error(error));
 db.once('connected', () =>
   console.log('Success! You are connected to Mongoose')
 );
+// db.on('Error on Mongo connection', (error) => console.error(error));
+// db.once('connected', () =>
+//   console.log('Success! You are connected to Mongoose')
+// );
 
 app.listen(PORT, () => {
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);

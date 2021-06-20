@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Header from '../components/Header';
+import Jumbotron from '../components/Jumbotron';
 import API from '../utils/API';
 import { List, ListItem } from '../components/List';
 import DeleteBtn from '../components/DeleteBtn';
@@ -27,13 +27,13 @@ function SavedBooks() {
 
   return (
     <div>
-      <Header className='fluid'>
+      <Jumbotron className='fluid'>
         <Container fluid>
           <Col>
             <h1>My Saved Books</h1>
           </Col>
         </Container>
-      </Header>
+      </Jumbotron>
       <br></br>
       <br></br>
       <Container fluid='md' id='resultsdiv'>

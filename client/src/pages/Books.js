@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Header from '../components/Header';
+import Jumbotron from '../components/Jumbotron';
 import API from '../utils/API';
 import { List, ListItem } from '../components/List';
 import { Input, FormBtn } from '../components/Form';
@@ -9,7 +9,7 @@ import './style.css';
 
 function Books() {
   // React access the api key in the .env
-  const apiKey = process.env.REACT_APP_API_KEY;
+  const apiKey = process.env.KEY;
 
   const [books, setBooks] = useState('');
   const [result, setResult] = useState([]);
@@ -21,15 +21,10 @@ function Books() {
     setBooks(book);
   }
 
-  // Change background color of save button when mouse hovers over it
-  function changeBackground(e) {
-    e.target.style.background = 'red';
-  }
-
   const searchGoogleBooks = async () => {
     await axios
       .get(
-        'https://www.googleapis.com/books/v1/volumes?q=' +
+        'https://www.googleapis.com/books/v1/volumes?q=search' +
           books +
           '&key=' +
           apiKey
@@ -63,12 +58,12 @@ function Books() {
 
   return (
     <div>
-      <Header className='fluid'>
+      <Jumbotron className='fluid'>
         <h1 className='search-header'>Google Book Search</h1>
-      </Header>
+      </Jumbotron>
       <Container fluid='md' className='search-container'>
         <Row>
-          <Col size='md-6'>
+          <Col size='md-5'>
             <Input
               onChange={handleChange}
               onSubmit={handleSubmit}
@@ -106,7 +101,7 @@ function Books() {
                         onMouseEnter={() => setIsHighlighted(true)}
                         onMouseLeave={() => setIsHighlighted(false)}
                       >
-                        {isHighlighted && <div>Click now to</div>}
+                        {isHighlighted && <div>Click now to:</div>}
                         Save Book to List
                       </button>
                     </ListItem>
@@ -114,7 +109,7 @@ function Books() {
                 })}
               </List>
             ) : (
-              <h3> No Results to Display</h3>
+              <h2> No Books to Display</h2>
             )}
           </Col>
         </Row>
