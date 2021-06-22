@@ -9,7 +9,7 @@ import './style.css';
 
 function Books() {
   // React access the api key in the .env
-  const apiKey = process.env.REACT_APP_Key;
+  // const apiKey = process.env.REACT_APP_Key;
 
   const [books, setBooks] = useState('');
   const [result, setResult] = useState([]);

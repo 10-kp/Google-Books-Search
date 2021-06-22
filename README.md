@@ -1,40 +1,53 @@
+[![](https://img.shields.io/badge/javascript-80%25-yellow)]()
+[![](https://img.shields.io/badge/CSS-10%25-blue)]()
+[![](https://img.shields.io/badge/HTML-9%25-red)]()
+[![](https://img.shields.io/badge/shell-1%25-green)]()
+
 # Google-Books-Search
 
-A React-based Google Books Search app
+A React-based Google Books Search app using - [MERN](https://www.educative.io/edpresso/what-is-mern-stack).
 
-<a href="https://github.com/10-kp"><img src="https://img.shields.io/badge/Github%20page-kp-1abc9c.svg" alt="User's github profile"></a>
+<img width="1000" alt="Screen Shot 1" src="client/public/bookpage-main.png">
+<img width="1000" alt="Screen Shot 2" src="client/public/saved-book.png">
 
-## Title:
+## Table of Contents
 
-Google Book Search - MERN
-
-## Link to Deployed Site:
-
-## Link to Repo:
-
-https://github.com/10-kp/Google-Books-Search
+- [Description](#description)
+- [Installation](#installation)
+- [Technologies Used](#technologies)
+- [Contributions](#contributions)
+- [Links](#link)
+- [License](#License)
 
 ## Description:
 
-A Google Book Search application to search the google books database and save books to your personal book list.
+A Google Book Search application to search the google books database and save books in a book list.
 
 ## Installation:
 
-In the command line of the working directory, install the following NPM packages: axios, body-parser, dotenv, express, if-env, jquery, mongoose, react, react-bootstrap, react-dom, reactstrap
+In the command line of the working directory, install the following NPM packages: axios, express, mongoose, react, react-bootstrap, react-dom, react-strip, uuid.
 
-## Usage:
+## Technologies:
 
-Enter a book title or an authors name into the Google Book Search bar. When the results return, the user can click save book to add the book to the saved book list. The saved books will display on the saved books page. From their the user can view the book by clicking the entry. This will take you to the books page in the Google Books Database. To remove a book from your saved book list, click the delete button.
-
-## Screenshot of application in use:
-
-<img width="1617" alt="Screen Shot 1" src="">
-<img width="1622" alt="Screen Shot 2" src="">
-<img width="1616" alt="Screen Shot 3" src="">
+- Enter a book title or author's name into the <strong>Google Book Search</strong> bar.
+- The user can save the book to the <strong>Saved book List</strong>.
+- To remove a book from your saved book list, click the <strong>Delete Icon</strong>.
 
 ## Contributions:
 
-React, Node.js, NPM's(express), HTML, Javascript, CSS
+- [React.js](https://reactjs.org/)
+- [Bootstrap](https://getbootstrap.com/)
+- [Node.js](https://nodejs.org/en/)
+- [Npm-Express](https://www.npmjs.com/package/express)
+- [Javascript](https://www.javascript.com/)
+- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+
+## Links
+
+Click here for the [Link](https://secure-springs-57437.herokuapp.com/)
+
+Click here for [GitHub](https://github.com/10-kp/Google-Books-Search)
 
 ## License:
 
