@@ -9,7 +9,7 @@ import './style.css';
 
 function Books() {
   // React access the api key in the .env
-  const apiKey = process.env.KEY;
+  const apiKey = process.env.REACT_APP_Key;
 
   const [books, setBooks] = useState('');
   const [result, setResult] = useState([]);
@@ -18,17 +18,13 @@ function Books() {
   //Handle change to search google books axios call
   function handleChange(event) {
     const book = event.target.value;
+    console.log(books);
     setBooks(book);
   }
 
   const searchGoogleBooks = async () => {
     await axios
-      .get(
-        'https://www.googleapis.com/books/v1/volumes?q=search' +
-          books +
-          '&key=' +
-          apiKey
-      )
+      .get('https://www.googleapis.com/books/v1/volumes?q=' + books)
       .then((data) => {
         setResult(data.data.items);
       })

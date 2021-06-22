@@ -4,12 +4,6 @@ const routes = require('./routes');
 const db = mongoose.connection;
 const PORT = process.env.PORT || 3001;
 const app = express();
-require('dotenv').config();
-
-//react access the api key in the .env
-process.env.KEY;
-// process.env.dbuser;
-// process.env.dbpassword;
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
